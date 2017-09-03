@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="app.john.com.simpletodo.MainActivity">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="Tasks: "
+        android:textSize="14pt"/>
+
+    <TextView
+        android:id="@+id/smallText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/txt"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="10dp"
+        android:text="Press button to add, click on task to edit, long press on task to delete."
+        android:textSize="5pt" />
+    <ListView
+        android:id="@+id/lvItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/smallText"
+        android:divider="#cacdce"
+        android:dividerHeight="2px"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnAddItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"
+        android:layout_gravity="bottom|right"
+        android:text="Add Item"
+        android:src="@drawable/ic_plus_circle_outline"
+        app:layout_anchor="@id/lvItems"
+        app:layout_anchorGravity="bottom|right|end"
+        app:backgroundTint="#42a4f4"
+        android:onClick="onAddItem"/>
+
+</RelativeLayout>

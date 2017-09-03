@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SimpleTodo</string>
+
+    <string id="pp" name="priority_prompt">Choose priority level: </string>
+
+    <string-array name="priority_array">
+        <item>HIGH</item>
+        <item>NORMAL</item>
+        <item>LOW</item>
+    </string-array>
+
+</resources>
